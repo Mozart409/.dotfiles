@@ -1,0 +1,156 @@
+terminal:
+  colorScheme:
+    name: Material
+    foreground: '#eceff1'
+    background: 'rgba(38, 50, 56, 1)'
+    selection: null
+    cursor: '#FFCC00'
+    colors:
+      - '#000000'
+      - '#D62341'
+      - '#9ECE58'
+      - '#FAED70'
+      - '#396FE2'
+      - '#BB80B3'
+      - '#2DDAFD'
+      - '#d0d0d0'
+      - 'rgba(255, 255, 255, 0.2)'
+      - '#FF5370'
+      - '#C3E88D'
+      - '#FFCB6B'
+      - '#82AAFF'
+      - '#C792EA'
+      - '#89DDFF'
+      - '#ffffff'
+  environment: {}
+  workingDirectory: /home/amadeus/GitHub
+  rightClick: paste
+  autoOpen: true
+  pasteOnMiddleClick: false
+  recoverTabs: false
+  copyOnSelect: true
+  warnOnMultilinePaste: false
+  profile: zsh
+  searchOptions: {}
+hotkeys:
+  toggle-window: []
+  profile: {}
+  clear:
+    - - Ctrl-K
+  shell: {}
+serial: {}
+ssh:
+  connections:
+    - name: Pi
+      group: null
+      host: 192.168.1.102
+      port: 22
+      user: pi
+      algorithms:
+        hmac:
+          - hmac-sha2-256
+          - hmac-sha2-512
+          - hmac-sha1
+        kex:
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+          - diffie-hellman-group-exchange-sha256
+          - diffie-hellman-group14-sha256
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group18-sha512
+          - diffie-hellman-group14-sha1
+        cipher:
+          - aes128-ctr
+          - aes192-ctr
+          - aes256-ctr
+          - aes128-gcm
+          - aes128-gcm@openssh.com
+          - aes256-gcm
+          - aes256-gcm@openssh.com
+        serverHostKey:
+          - ssh-ed25519
+          - ecdsa-sha2-nistp256
+          - ecdsa-sha2-nistp384
+          - ecdsa-sha2-nistp521
+          - ssh-rsa
+      scripts: []
+      auth: password
+    - name: Stuhloase
+      group: null
+      host: w017b7ec.kasserver.com
+      port: 22
+      user: ssh-w017b7ec
+      algorithms:
+        hmac:
+          - hmac-sha2-256
+          - hmac-sha2-512
+          - hmac-sha1
+        kex:
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+          - diffie-hellman-group-exchange-sha256
+          - diffie-hellman-group14-sha256
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group18-sha512
+          - diffie-hellman-group14-sha1
+        cipher:
+          - aes128-ctr
+          - aes192-ctr
+          - aes256-ctr
+          - aes128-gcm
+          - aes128-gcm@openssh.com
+          - aes256-gcm
+          - aes256-gcm@openssh.com
+        serverHostKey:
+          - ssh-ed25519
+          - ecdsa-sha2-nistp256
+          - ecdsa-sha2-nistp384
+          - ecdsa-sha2-nistp521
+          - ssh-rsa
+      scripts: []
+      auth: password
+    - name: Bookyt
+      group: null
+      host: bookyt.de
+      port: 22
+      user: root
+      algorithms:
+        hmac:
+          - hmac-sha2-256
+          - hmac-sha2-512
+          - hmac-sha1
+        kex:
+          - curve25519-sha256@libssh.org
+          - curve25519-sha256
+          - ecdh-sha2-nistp256
+          - ecdh-sha2-nistp384
+          - ecdh-sha2-nistp521
+          - diffie-hellman-group14-sha256
+          - diffie-hellman-group16-sha512
+          - diffie-hellman-group18-sha512
+          - diffie-hellman-group14-sha1
+        cipher:
+          - aes128-ctr
+          - aes192-ctr
+          - aes256-ctr
+          - aes128-gcm
+          - aes128-gcm@openssh.com
+          - aes256-gcm
+          - aes256-gcm@openssh.com
+        serverHostKey:
+          - ssh-ed25519
+          - ecdsa-sha2-nistp256
+          - ecdsa-sha2-nistp384
+          - ecdsa-sha2-nistp521
+          - ssh-rsa
+      scripts: []
+      auth: null
+appearance:
+  tabsLocation: top
+  opacity: 0.47
+  vibrancy: false
+enableAnalytics: false
+enableWelcomeTab: false
+pluginBlacklist: []
