@@ -16,8 +16,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # load after zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 
@@ -25,3 +23,7 @@ antigen theme half-life
 
 # Tell Antigen that you're done.
 antigen apply
+
+# fnm
+export PATH=/home/amadeus-debian/.fnm:$PATH
+eval "$(fnm env)"
