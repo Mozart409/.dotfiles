@@ -29,6 +29,7 @@ alias zs="micro ~/.zshrc"
 alias sc="source ~/.zshrc"
 alias vs="code ."
 alias tr="trash"
+alias ports="netstat -tulpn"
 
 # fnm
 export PATH=/home/amadeus/.fnm:$PATH
