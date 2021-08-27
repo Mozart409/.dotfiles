@@ -30,6 +30,8 @@ alias sc="source ~/.zshrc"
 alias vs="code ."
 alias tr="trash"
 alias ports="netstat -tulpn"
+alias rustscan='docker run -it --rm --name rustscan rustscan/rustscan:1.10.0'
+
 
 # fnm
 export PATH=/home/amadeus/.fnm:$PATH
