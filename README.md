@@ -29,5 +29,5 @@ curl -sLS https://get.arkade.dev | sudo sh
 ```
 
 ```sh
-arkade get kubectl helm kubens kubecm hey jq k3s docker-compose caddy
+arkade get kubectl helm kubens kubecm hey jq k3s docker-compose caddy istioctl
 ```
