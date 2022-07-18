@@ -9,6 +9,6 @@ curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/master/setup-new-m
 Fedora
 
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Mozart409/.dotfiles/master/fedora.sh | sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Mozart409/.dotfiles/master/fedora.sh | sudo sh
 
 ```
