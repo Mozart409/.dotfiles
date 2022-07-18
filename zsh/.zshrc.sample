@@ -29,3 +29,7 @@ alias sc="source ~/.zshrc"
 
 # Tell Antigen that you're done.
 antigen apply
+
+
+# arkade
+export PATH=$PATH:$HOME/.arkade/bin/
