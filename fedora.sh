@@ -29,9 +29,9 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "./.fnm" --
 
 echo "node"
 # node
-fnm install 18
-fnm default 18
-corepack enable
+# fnm install 18
+# fnm default 18
+# corepack enable
 
 # change shell
 chsh -s $(which zsh)
