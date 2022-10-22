@@ -27,6 +27,10 @@ echo "fnm"
 # fnm
 curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "./.fnm" --skip-shell
 
+
+echo "dprint"
+curl -fsSL https://dprint.dev/install.sh | sh
+
 echo "node"
 # node
 # fnm install 18
