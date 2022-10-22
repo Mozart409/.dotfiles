@@ -5,7 +5,7 @@ dnf update -y
 
 # Install packages
 dnf install wget curl zip git fira-code-fonts util-linux-user util-linux zsh tmux -y
-dnf groupinstall "Development Tools" "Development Libraries"
+dnf groupinstall "Development Tools" "Development Libraries" -y
 
 # ZSH
 curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample > ~/.zshrc
