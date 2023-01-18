@@ -4,7 +4,7 @@ source "${HOME}/antigen.zsh"
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle yarn
+# antigen bundle yarn
 antigen bundle command-not-found
 antigen bundle history-substring-search
 antigen bundle docker
@@ -24,7 +24,7 @@ antigen theme spaceship-prompt/spaceship-prompt
 # Aliases
 alias vs="code ."
 alias dps="docker ps"
-alias zs="nano ~/.zshrc"
+alias zs="vim ~/.zshrc"
 alias k="kubectl"
 alias sc="source ~/.zshrc"
 

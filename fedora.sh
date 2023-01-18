@@ -1,11 +1,18 @@
 #!/bin/sh
+# check if sudo
+if [ "$USER" != "root" ]
+then
+    echo "Please run this as root or with sudo"
+    exit 2
+fi
 
-set -u
+set -u 
 dnf update -y
 
 echo "Installing packages"
 # Install packages
 dnf install wget curl zip git fira-code-fonts util-linux-user util-linux zsh tmux -y
+dnf install google-cousine-fonts -y
 dnf groupinstall "Development Tools" "Development Libraries" -y
 dnf install 'dnf-command(config-manager)' -y
 
@@ -30,3 +37,11 @@ echo "node"
 
 # change shell
 chsh -s $(which zsh)
+
+# instell helix editor
+dnf copr enable varlad/helix
+dnf install helix -y
+
+# install github cli
+dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo -y
+dnf install gh -y
