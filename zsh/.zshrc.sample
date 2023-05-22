@@ -22,11 +22,14 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme spaceship-prompt/spaceship-prompt
 
 # Aliases
-alias vs="code ."
+# alias vs="code ."
 alias dps="docker ps"
 alias zs="vim ~/.zshrc"
-alias k="kubectl"
-alias sc="source ~/.zshrc"
+# alias k="kubectl"
+# alias sc="source ~/.zshrc"
+alias ports="netstat -tulpn"
+alias lzd="lazydocker"
+alias lg="lazygit"
 
 # Tell Antigen that you're done.
 antigen apply
