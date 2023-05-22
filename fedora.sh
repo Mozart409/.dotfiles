@@ -39,7 +39,7 @@ curl -L git.io/antigen > ~/antigen.zsh
 chsh -s $(which zsh)
 
 # instell helix editor
-dnf copr enable varlad/helix
+dnf copr enable varlad/helix -y
 dnf install helix -y
 
 # install github cli
