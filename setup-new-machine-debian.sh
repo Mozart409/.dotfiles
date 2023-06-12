@@ -30,4 +30,10 @@ zsh
 
 # aqua install --all
 
+# install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+# download docker script
+curl -fsSL https://get.docker.com -o ~/get-docker.sh
+
 chsh -s $(which zsh)
