@@ -11,7 +11,8 @@ dnf update -y
 
 echo "Installing packages"
 # Install packages
-dnf install wget curl zsh zip git net-tools fira-code-fonts bat vim util-linux-user util-linux zsh tmux google-cousine-fonts -y
+dnf install wget curl zsh zip git net-tools fira-code-fonts bat vim util-linux-user util-linux zsh tmux google-cousine-fonts gcc-c++
+ -y
 dnf groupinstall "Development Tools" "Development Libraries" -y
 dnf install 'dnf-command(config-manager)' -y
 dnf copr enable atim/lazygit -y
