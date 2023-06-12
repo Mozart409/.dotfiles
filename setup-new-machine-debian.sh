@@ -22,12 +22,12 @@ curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sa
 curl -L git.io/antigen >~/antigen.zsh
 zsh
 
-echo "install aqua"
-curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash
+# echo "install aqua"
+# curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash
 
-echo "Download aqua config"
-curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/aqua.yaml >~/.config/aqua/aqua.yaml
+# echo "Download aqua config"
+# curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/aqua.yaml >~/.config/aqua/aqua.yaml
 
-aqua install --all
+# aqua install --all
 
 chsh -s $(which zsh)
