@@ -39,10 +39,6 @@ curl -L git.io/antigen > ~/antigen.zsh
 # change shell
 chsh -s $(which zsh)
 
-# instell helix editor
-dnf copr enable varlad/helix -y
-dnf install helix -y
-
 # install github cli
 dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo -y
 dnf install gh -y
