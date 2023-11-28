@@ -16,10 +16,14 @@ echo "Updating sources"
 apt update -y
 do_space
 echo "Installing new packages"
-apt-get -q -y install fonts-firacode git zsh curl wget zip build-essential net-tools vim neovim
+apt-get -q -y install fonts-firacode git zsh curl wget zip build-essential tmux net-tools vim neovim
 
 curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample >~/.zshrc
 curl -L git.io/antigen > ~/antigen.zsh
+
+# TPM
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/tmux/tmux.conf > ~/.config/tmux.conf
 
 zsh
 
