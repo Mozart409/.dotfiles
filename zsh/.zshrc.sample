@@ -7,7 +7,6 @@ antigen use oh-my-zsh
 # antigen bundle yarn
 antigen bundle command-not-found
 antigen bundle history-substring-search
-antigen bundle docker
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -17,9 +16,9 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 # Load the theme.
 
-# antigen theme denysdovhan/spaceship-prompt
-#antigen theme half-life
-antigen theme spaceship-prompt/spaceship-prompt
+# antigen theme half-life
+# antigen theme spaceship-prompt/spaceship-prompt
+antigen theme minimal
 
 # Aliases
 # alias vs="code ."
