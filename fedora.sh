@@ -22,14 +22,6 @@ echo "zsh config"
 curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample > ~/.zshrc
 curl -L git.io/antigen > ~/antigen.zsh
 
-# echo "install aqua"
-# curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash
-
-# echo "Download aqua config"
-# curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/aqua.yaml >~/.config/aqua/aqua.yaml
-
-# aqua install --all
-
 # echo "node"
 # node
 # fnm install 18
