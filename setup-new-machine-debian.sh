@@ -16,7 +16,7 @@ echo "Installing new packages"
 apt-get -q -y install fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim
 
 mkdir -p ~/.config/nvim
-curl -o ~/.config/nvim/init.vim -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/nvim/init.vim
+curl -o ~/.config/nvim/init.lua L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/nvim/init.lua
 
 curl -o ~/.zshrc -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample
 curl -L git.io/antigen > ~/antigen.zsh
