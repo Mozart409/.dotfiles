@@ -18,7 +18,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 # antigen theme half-life
 # antigen theme spaceship-prompt/spaceship-prompt
-antigen theme minimal
+antigen theme cloud
 
 # Aliases
 # alias vs="code ."
