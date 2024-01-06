@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ $(whoami) != root ]; then
+if [ "$(whoami)" != root ]; then
     echo -e "Please run this script as root or using \e[31msudo"
     echo
     exit
@@ -17,41 +17,41 @@ apt install nala
 echo "Installing new packages"
 nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep
 
-mkdir -p ~/.config/nvim
-curl -o ~/.config/nvim/init.lua -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/nvim/init.lua
 
-curl -o ~/.zshrc -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample
-curl -L git.io/antigen > ~/antigen.zsh
+echo cloning .dotfiles in home / ~ dir
+cd "$HOME" || exit 1
+git clone https://github.com/Mozart409/.dotfiles.git
 
-# tmux
-mkdir -p ~/.config/tmux
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-curl -o ~/.config/tmux/tmux.conf -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/tmux/tmux.conf
+NVIM_DIRECTORY="$HOME/.config/nvim"
+TMUX_DIRECTORY="$HOME/.config/tmux"
 
-chsh -s $(which zsh)
+if [ -d "$NVIM_DIRECTORY" ]; then
+  echo "$NVIM_DIRECTORY does exist. Aborting"
+
+else
+ echo "$NVIM_DIRECTORY does _NOT_ exist. symlinking config"
+ ln -s "$HOME"/.dotfiles/nvim "$HOME"/.config/nvim
+fi
+
+if [ -d "$TMUX_DIRECTORY" ]; then
+  echo "$TMUX_DIRECTORY does exist. Aborting"
+
+else
+ echo "$TMUX_DIRECTORY does _NOT_ exist. symlinking config"
+ ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
+
+ echo "Cloning tpm"
+ git clone https://github.com/tmux-plugins/tpm "$HOME"/.config/tmux/plugins/tpm
+
+fi
+
+
+curl -o "$HOME"/.zshrc -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/zsh/.zshrc.sample
+curl -L git.io/antigen > "$HOME"/antigen.zsh
+
+chsh -s "$(which zsh)"
 
 zsh
 
-
-
-# echo "install aqua"
-# curl -sSfL https://raw.githubusercontent.com/aquaproj/aqua-installer/v1.1.2/aqua-installer | bash
-
-# echo "Download aqua config"
-# curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/aqua.yaml >~/.config/aqua/aqua.yaml
-
-# aqua install --all
-
 # install tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
-
-# download docker script
-# curl -fsSL https://get.docker.com -o ~/get-docker.sh
-
-# apt install -y debian-keyring debian-archive-keyring apt-transport-https
-# curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-# curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
-# apt update
-# apt install caddy
-
-
