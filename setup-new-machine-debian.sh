@@ -15,7 +15,7 @@ apt update -y
 apt install nala
 
 echo "Installing new packages"
-nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim
+nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep
 
 mkdir -p ~/.config/nvim
 curl -o ~/.config/nvim/init.lua -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/nvim/init.lua
