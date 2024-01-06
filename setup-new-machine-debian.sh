@@ -54,7 +54,9 @@ else
  ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
 
  echo "Cloning tpm"
- git clone https://github.com/tmux-plugins/tpm "$HOME"/.config/tmux/plugins/tpm
+ git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/tpm"
+ 
+ ln -s "$HOME"/.dotfiles/tpm "$HOME"/.config/tmux/plugins/tpm
 
 fi
 
