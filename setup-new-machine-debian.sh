@@ -27,8 +27,7 @@ nala install -y --update fonts-firacode git zsh curl wget zip build-essential tm
 
 
 echo "cloning .dotfiles in home / ~ dir"
-cd "$HOME" || exit 1
-git clone https://github.com/Mozart409/.dotfiles.git
+git clone https://github.com/Mozart409/.dotfiles.git "$HOME"
 
 if [ ! -d "$HOME/.config" ]; then
   echo "creating ~/.config folder"
