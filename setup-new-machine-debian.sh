@@ -59,3 +59,6 @@ zsh
 
 # install tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
+
+# install fnm
+curl -fsSL https://fnm.vercel.app/install | bash
