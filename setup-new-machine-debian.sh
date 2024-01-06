@@ -51,13 +51,9 @@ if [ -d "$TMUX_DIRECTORY" ]; then
 
 else
  echo "$TMUX_DIRECTORY does _NOT_ exist. symlinking config"
- ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
-
  echo "Cloning tpm"
- git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/tpm"
- 
- ln -s "$HOME"/.dotfiles/tpm "$HOME"/.config/tmux/plugins/tpm
-
+ git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/tmux/plugins/tpm"
+ ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
 fi
 
 
