@@ -42,4 +42,4 @@ vim.o.termguicolors = true
 -- vim: ts=2 sts=2 sw=2 et
 
 -- set autoread
-set autoread
+vim.opt_global.ar = true
