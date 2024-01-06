@@ -12,7 +12,7 @@ export DEBIAN_FRONTEND=noninteractive
 echo "Updating sources"
 apt update -y
 
-apt install nala
+apt install -y nala
 
 nala install -y --update wget
 
