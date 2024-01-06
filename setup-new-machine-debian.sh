@@ -26,7 +26,7 @@ echo "Installing new packages"
 nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim just ripgrep
 
 
-echo cloning .dotfiles in home / ~ dir
+echo "cloning .dotfiles in home / ~ dir"
 cd "$HOME" || exit 1
 git clone https://github.com/Mozart409/.dotfiles.git
 
