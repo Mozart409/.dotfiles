@@ -30,6 +30,11 @@ echo "cloning .dotfiles in home / ~ dir"
 cd "$HOME" || exit 1
 git clone https://github.com/Mozart409/.dotfiles.git
 
+if [ ! -d "$HOME/.config" ]; then
+  echo "creating ~/.config folder"
+  mkdir "$HOME/.config"
+fi
+
 NVIM_DIRECTORY="$HOME/.config/nvim"
 TMUX_DIRECTORY="$HOME/.config/tmux"
 
