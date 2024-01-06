@@ -12,8 +12,10 @@ export DEBIAN_FRONTEND=noninteractive
 echo "Updating sources"
 apt update -y
 
+apt install nala
+
 echo "Installing new packages"
-apt-get -q -y install fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim
+nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim
 
 mkdir -p ~/.config/nvim
 curl -o ~/.config/nvim/init.lua -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/nvim/init.lua
@@ -26,9 +28,10 @@ mkdir -p ~/.config/tmux
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 curl -o ~/.config/tmux/tmux.conf -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/.config/tmux/tmux.conf
 
+chsh -s $(which zsh)
+
 zsh
 
-chsh -s $(which zsh)
 
 
 # echo "install aqua"
