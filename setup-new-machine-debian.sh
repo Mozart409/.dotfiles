@@ -43,7 +43,7 @@ if [ -d "$NVIM_DIRECTORY" ]; then
 
 else
  echo "$NVIM_DIRECTORY does _NOT_ exist. symlinking config"
- ln -s "$HOME"/.dotfiles/nvim "$HOME"/.config/nvim
+ ln -s "$HOME"/.dotfiles/.config/nvim "$HOME"/.config/nvim
 fi
 
 if [ -d "$TMUX_DIRECTORY" ]; then
@@ -52,8 +52,8 @@ if [ -d "$TMUX_DIRECTORY" ]; then
 else
  echo "$TMUX_DIRECTORY does _NOT_ exist. symlinking config"
  echo "Cloning tpm"
- git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/tmux/plugins/tpm"
- ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
+ git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/.config/tmux/plugins/tpm"
+ ln -s "$HOME"/.dotfiles/.config/tmux "$HOME"/.config/tmux
 fi
 
 
