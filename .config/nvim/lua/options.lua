@@ -8,6 +8,8 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 
+-- Set relative Line numbers
+vim.o.rnu = true
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
@@ -42,4 +44,4 @@ vim.o.termguicolors = true
 -- vim: ts=2 sts=2 sw=2 et
 
 -- set autoread
-set autoread
+vim.opt_global.ar = true
