@@ -25,4 +25,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+vim.api.nvim_set_keymap('n', '<leader>fe', ':Neotree<CR>', { noremap = true, silent = true })
 -- vim: ts=2 sts=2 sw=2 et
