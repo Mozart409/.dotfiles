@@ -14,7 +14,7 @@ apt update -y
 
 apt install -y nala
 
-nala install -y --update wget gpg
+nala install -y --update wget gpg passwd
 
 # Add MPR Repo
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
