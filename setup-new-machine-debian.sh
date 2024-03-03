@@ -17,7 +17,7 @@ apt install -y nala
 nala install -y --update wget gpg passwd
 
 echo "Installing new packages"
-nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep jq sed
+nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep jq sed unzip
 
 
 echo "cloning .dotfiles in home / ~ dir"
