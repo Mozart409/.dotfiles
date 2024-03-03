@@ -14,11 +14,8 @@ apt update -y
 
 apt install -y nala
 
-nala install -y --update wget gpg passwd
-
 echo "Installing new packages"
-nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep jq sed unzip
-
+nala install -y --update wget gpg passwd fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim ripgrep jq sed unzip
 
 echo "cloning .dotfiles in home / ~ dir"
 git clone https://github.com/Mozart409/.dotfiles.git "$HOME"
