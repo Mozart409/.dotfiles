@@ -14,21 +14,11 @@ apt update -y
 
 apt install -y nala
 
-nala install -y --update wget gpg
-
-# Add MPR Repo
-wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
-
-echo "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
-
-
 echo "Installing new packages"
-nala install -y --update fonts-firacode git zsh curl wget zip build-essential tmux net-tools neovim just ripgrep
-
+nala install -y --update wget gpg passwd fonts-firacode git zsh curl zip build-essential tmux net-tools neovim ripgrep jq sed unzip
 
 echo "cloning .dotfiles in home / ~ dir"
-cd "$HOME" || exit 1
-git clone https://github.com/Mozart409/.dotfiles.git
+git clone https://github.com/Mozart409/.dotfiles.git "$HOME"
 
 if [ ! -d "$HOME/.config" ]; then
   echo "creating ~/.config folder"
@@ -38,22 +28,16 @@ fi
 NVIM_DIRECTORY="$HOME/.config/nvim"
 TMUX_DIRECTORY="$HOME/.config/tmux"
 
-if [ -d "$NVIM_DIRECTORY" ]; then
-  echo "$NVIM_DIRECTORY does exist. Aborting"
-
-else
+if [ ! -d "$NVIM_DIRECTORY" ]; then
  echo "$NVIM_DIRECTORY does _NOT_ exist. symlinking config"
- ln -s "$HOME"/.dotfiles/nvim "$HOME"/.config/nvim
+ ln -s "$HOME"/.dotfiles/.config/nvim "$HOME"/.config/nvim
 fi
 
-if [ -d "$TMUX_DIRECTORY" ]; then
-  echo "$TMUX_DIRECTORY does exist. Aborting"
-
-else
+if [ ! -d "$TMUX_DIRECTORY" ]; then
  echo "$TMUX_DIRECTORY does _NOT_ exist. symlinking config"
  echo "Cloning tpm"
- git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/tmux/plugins/tpm"
- ln -s "$HOME"/.dotfiles/tmux "$HOME"/.config/tmux
+ git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/.config/tmux/plugins/tpm"
+ ln -s "$HOME"/.dotfiles/.config/tmux "$HOME"/.config/tmux
 fi
 
 
@@ -66,3 +50,6 @@ zsh
 
 # install tailscale
 curl -fsSL https://tailscale.com/install.sh | sh
+
+# install fnm
+curl -fsSL https://fnm.vercel.app/install | bash
