@@ -3,4 +3,4 @@
 --
 -- See the kickstart.nvim README for more information
 
-return {'autopairs', 'filetree'}
+return { 'autopairs', 'filetree', 'spectre' }
