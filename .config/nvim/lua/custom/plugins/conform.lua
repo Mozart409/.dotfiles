@@ -22,6 +22,7 @@ return {
       yaml = { "yamlfmt" },
       go = { "goimports", "gofmt" },
       javascript = { { "biome" } },
+      ["_"] = { "trim_whitespace" },
     },
     -- Set up format-on-save
     format_on_save = { timeout_ms = 500, lsp_fallback = true },
