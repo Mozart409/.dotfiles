@@ -8,10 +8,10 @@ sudo apt install curl -y
 curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/setup-new-machine-debian.sh | sudo sh
 ```
 
-## Fedora
+## Hardening SSH
 
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Mozart409/.dotfiles/main/fedora.sh | sudo sh
+curl -L https://raw.githubusercontent.com/Mozart409/.dotfiles/main/harden-ssh.sh | sudo sh
 ```
 
 ## Docker
