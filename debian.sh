@@ -23,7 +23,7 @@ touch ~/.zshrc
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 # Append to zshrc
-wget https://raw.githubusercontent.com/mozart409/.dotfiles/main/zshrc >>~/.zshrc
+wget https://raw.githubusercontent.com/mozart409/.dotfiles/main/zshrc -O - >>~/.zshrc
 
 # Change the shell to zsh
 usermod -s /usr/bin/zsh $USER
